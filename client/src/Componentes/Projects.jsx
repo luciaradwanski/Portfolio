@@ -29,7 +29,7 @@ export const Projects = () => {
                     <div className='Video'>
                         <h4 className='NameP'>PF Computer Store</h4>
                         <hr />
-                        <p className='ParrafoP'>Desarrolle y diseñe junto a mis compañeros esta app, con login, carrito, reviews, mercado pago, perfil de usuario, perfil de admin. Tecnologías utilizadas: Node JS,  Express, Sequelize, PostgreSQL, React, Redux, antd, bootstrap, mercado pago, autenticación por terceros, ava Script, CSS, y HTML5</p>
+                        <p className='ParrafoP'>Desarrolle y diseñe junto a mis compañeros esta app, con login, carrito, reviews, mercado pago, perfil de usuario, perfil de admin. Tecnologías utilizadas: Node JS,  Express, Sequelize, PostgreSQL, React, Redux, antd, bootstrap, mercado pago, autenticación por terceros, ava Script, CSS, y HTML</p>
                     </div>
                 </section>
             </div>
