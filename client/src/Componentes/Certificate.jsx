@@ -7,7 +7,8 @@ import '../Styles/Certificate.css'
 
 export const Certificate = () => {
     return (
-        <div className='ContainerC'>
+        <div className='ContainerC' id='certificate'>
+            <h4 className='TitleCertificates'>Certificates</h4>
             <div className='ContainerCertificate'>
                 <object data={certificate1} type="application/pdf" width="300px" height="200px">
                     <p>Tu navegador no soporta PDFs. Puedes descargar el archivo aquí: <a href={certificate1}>Descargar PDF</a>.</p>

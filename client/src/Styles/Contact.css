@@ -1,0 +1,37 @@
+.ContainerF{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.TitleContact{
+    text-transform: uppercase;
+}
+.ContainerForm{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    width: 800px;
+    padding: 40px;
+    margin-bottom: 60px;
+}
+
+.Label{
+    display: flex;
+    justify-content:flex-start;
+    font-size: 18px;
+}
+
+.Input{
+    width: 600px;
+}
+
+.Text{
+    width: 600px;
+}
