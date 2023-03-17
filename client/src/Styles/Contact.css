@@ -35,3 +35,9 @@
 .Text{
     width: 600px;
 }
+
+.SpanError{
+    color: red;
+    position: absolute;
+    margin-left: 35%;
+}

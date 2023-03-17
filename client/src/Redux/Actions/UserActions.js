@@ -1,3 +1,4 @@
+import axios from 'axios'
 export const GET_ALL_USERS = 'GET_ALL_USERS';
 export const GET_USERS_BY_ID = 'GET_USERS_BY_ID';
 export const CREATE_USER = 'CREATE_USER'
@@ -41,6 +42,6 @@ export const deleteUser = (id) => {
     
     return async function (dispatch){
         const use = await axios.delete(`http://localhost:3001/user/${id}`)  
-        return dispatch({ type: DELETE_PROJECT, payload: use.data })
+        return dispatch({ type: DELETE_USER, payload: use.data })
     }  
 }

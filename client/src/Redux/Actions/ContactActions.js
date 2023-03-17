@@ -1,3 +1,4 @@
+import axios from 'axios'
 export const GET_ALL_CONTACTS = 'GET_ALL_CONTACTS';
 export const GET_CONTACTS_BY_ID = 'GET_CONTACTS_BY_ID';
 export const CREATE_CONTACT = 'CREATE_CONTACT'
@@ -22,14 +23,17 @@ export const getContactById = (id) => {
     }
 }; 
 
-export function createContact(payload){
-    return async function (dispatch){
-        const postContact = await axios.post('http://localhost:3001/contact',payload);
-        console.log(postContact);
-        return postContact;
-    }           
-}; 
-
+// export function createContact(payload){
+//     return async function (dispatch){
+//         const postContact = await axios.post('http://localhost:3001/contact/',payload);
+//         console.log(postContact);
+//         return postContact;
+//     }           
+// }; 
+export const createContact =  (payload)=> async(dispatch)=>{
+    return await axios.post("http://localhost:3001/contact/",payload).then(r=>
+    dispatch({type: CREATE_CONTACT, payload}))
+};
 export const ModifyContact = (id) => {
     
     return async function (dispatch){

@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
+import { createContact, getAllContacts } from '../Redux/Actions/ContactActions';
+import swal from 'sweetalert';
+
 import '../Styles/Contact.css'
-
-
 
 function validate(input) {
     let errors = {};
@@ -38,33 +41,60 @@ function validate(input) {
 
 export const Contact = () => {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const dispatch = useDispatch()
+    
+    const history =  useHistory()
+    const [error, setError] = useState({});
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
+    const [input, setInput] = useState({
+        name: '',
+        email: '',
+        message: '',
+    })
+    
+    const handleInputChange = (e) => {
+        setError(validate({...input, [e.target.name] : e.target.value}));
+        setInput({...input, [e.target.name] : e.target.value})
+        console.log(input);
+    }
+
+    const handleSubmit = (e) => {
+        if(!input.name || !input.email || !input.message) {
+            return swal('Cannot create contact', '', 'error')
+        } else {
+            e.preventDefault();
+            console.log(input);
+            setError(validate({...input, [e.target.name] : e.target.value}))
+            dispatch(createContact(input))
+            swal('Created contact', "", 'success');
+            setInput({
+                name: '',
+                email: '',
+                message: '',
+            })
+        }
     };
 
 
     return (
         <div className='ContainerF'>
-            <form className='ContainerForm' onSubmit={handleSubmit}>
+            
+            <form className='ContainerForm' onSubmit={(e) => handleSubmit(e)}>
                 <h4 className='TitleContact'>Contact</h4>
                 <div>
                     <label className='Label'>Name:</label>
-                    <input className='Input' type="text" value={name} onChange={(event) => setName(event.target.value)} />
+                    <input className='Input' type="text" id="name" name="name" value={input.name} onChange={(e) => handleInputChange(e)} />
+                    {error.name && (<p className="SpanError">{error.name}</p>)}
                 </div>
                 <div>
                     <label className='Label'>Email:</label>
-                    <input className='Input' type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
+                    <input className='Input' type="email" id="email" name="email" value={input.email} onChange={(e) => handleInputChange(e)} />
+                    {error.email && (<p className="SpanError">{error.email}</p>)}
                 </div>
                 <div>
                     <label className='Label'>Message:</label>
-                    <textarea style={{height: "100px"}} className='Text' value={message} onChange={(event) => setMessage(event.target.value)} />
+                    <textarea style={{height: "100px"}} className='Text' id="message" name="message" value={input.message} onChange={(e) => handleInputChange(e)} />
+                    {error.message && (<p className="SpanError">{error.message}</p>)}
                 </div>
                 <button type="submit">Submit</button>
             </form>
