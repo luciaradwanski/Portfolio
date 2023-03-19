@@ -7,6 +7,7 @@ import { Projects } from './Componentes/Projects';
 import { Skills } from './Componentes/Skills';
 import { Certificate } from './Componentes/Certificate';
 import { Contact } from './Componentes/Contact';
+import { Footer } from './Componentes/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Projects/>
         <Certificate/>
         <Contact/>
+        <Footer/>
       </main>
     </div>
   );

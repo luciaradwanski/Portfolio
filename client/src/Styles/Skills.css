@@ -24,3 +24,11 @@
     background-color: #f72585;
 }
 
+.NameSkill{
+    color: black;
+}
+
+.NameSkill:hover{
+    color:  white;
+}
+

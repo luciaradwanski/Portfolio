@@ -3,6 +3,7 @@ import certificate1 from '../Certificate/certificate1.pdf';
 import certificate2 from '../Certificate/certificate2.pdf';
 import certificate3 from '../Certificate/certificate3.pdf';
 import certificate4 from '../Certificate/certificate4.pdf';
+import henry from '../Certificate/henry.pdf'
 import '../Styles/Certificate.css'
 
 export const Certificate = () => {
@@ -20,6 +21,9 @@ export const Certificate = () => {
                     <p>Tu navegador no soporta PDFs. Puedes descargar el archivo aquí: <a href={certificate3}>Descargar PDF</a>.</p>
                 </object>
                 <object data={certificate4} type="application/pdf" width="300px" height="200px">
+                    <p>Tu navegador no soporta PDFs. Puedes descargar el archivo aquí: <a href={certificate4}>Descargar PDF</a>.</p>
+                </object>
+                <object data={henry} type="application/pdf" width="300px" height="200px">
                     <p>Tu navegador no soporta PDFs. Puedes descargar el archivo aquí: <a href={certificate4}>Descargar PDF</a>.</p>
                 </object>
             </div>

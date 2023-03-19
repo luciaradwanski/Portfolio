@@ -1,8 +1,16 @@
 import React from 'react';
+import {useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import '../Styles/Projects.css'
-
+import {getAllProjects} from '../Redux/Actions/ProjectActions.js'
+import {Card} from './Card'
 export const Projects = () => {
 
+    const dispatch = useDispatch()
+    const proj = useSelector((state) => state.projects)
+    useEffect(() => {
+        dispatch(getAllProjects())
+    }, [dispatch])
     
     return (
         <div className='ContainerP' id='projects'>
@@ -33,6 +41,19 @@ export const Projects = () => {
                     </div>
                 </section>
             </div>
+            {/* <div>
+                {proj.map((p, index) => (
+                    <Card
+                        name={p.name}
+                        description={p.description}
+                        githubUrl={p.githubUrl}
+                        demoUrl={p.demoUrl}
+                        vimeoUrl={p.vimeoUrl}
+                        key={index}
+                    />
+                    
+                ))}
+            </div> */}
         </div>
     )
 }

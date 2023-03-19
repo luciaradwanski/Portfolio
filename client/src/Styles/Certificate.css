@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-bottom: 60px;
+    gap: 40px;
 }
 
 .TitleCertificates{

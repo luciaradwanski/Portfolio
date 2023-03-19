@@ -20,43 +20,43 @@ export const Skills = () => {
                 <h2 className='TitleSkills'>Skills</h2>
                 <div className='Skills'>
                     <div>
-                        <h5>Node.JS</h5>
+                        <h5 className='NameSkill'>Node.JS</h5>
                         <FaNodeJs />
                     </div>
                     <div>
-                        <h5>PostgreSQL</h5>
+                        <h5 className='NameSkill'>PostgreSQL</h5>
                         <SiPostgresql />
                     </div>
                     <div>
-                        <h5>Express</h5>
+                        <h5 className='NameSkill'>Express</h5>
                         <SiExpress/>
                     </div>
                     <div>
-                        <h5>Sequelize</h5>
+                        <h5 className='NameSkill'>Sequelize</h5>
                         <SiSequelize/>
                     </div>
                     <div>
-                        <h5>Java Script</h5>
+                        <h5 className='NameSkill'>Java Script</h5>
                         <SiJavascript/>
                     </div>
                     <div>
-                        <h5>React</h5>
+                        <h5 className='NameSkill'>React</h5>
                         <FaReact/>
                     </div>
                     <div>
-                        <h5>Redux</h5>
+                        <h5 className='NameSkill'>Redux</h5>
                         <SiRedux />
                     </div>
                     <div>
-                        <h5>HTML5</h5>
+                        <h5 className='NameSkill'>HTML5</h5>
                         <AiFillHtml5/>
                     </div>
                     <div>
-                        <h5>CSS</h5>
+                        <h5 className='NameSkill'>CSS</h5>
                         <SiCss3/>
                     </div>
                     <div>
-                        <h5>TypeScript</h5>
+                        <h5 className='NameSkill'>TypeScript</h5>
                         <SiTypescript/>
                     </div>
                 </div>

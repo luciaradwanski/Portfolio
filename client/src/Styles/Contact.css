@@ -26,10 +26,18 @@
     display: flex;
     justify-content:flex-start;
     font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.Label:hover{
+    color:#f72585;
 }
 
 .Input{
     width: 600px;
+    color: #f72585;
+    padding: 5px;
+    margin-bottom: 20px;
 }
 
 .Text{
@@ -40,4 +48,14 @@
     color: red;
     position: absolute;
     margin-left: 35%;
+}
+
+.ButtonContact{
+    background-color: #f72585;
+    color: white;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
 }

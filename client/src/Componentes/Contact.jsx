@@ -96,7 +96,7 @@ export const Contact = () => {
                     <textarea style={{height: "100px"}} className='Text' id="message" name="message" value={input.message} onChange={(e) => handleInputChange(e)} />
                     {error.message && (<p className="SpanError">{error.message}</p>)}
                 </div>
-                <button type="submit">Submit</button>
+                <button className='ButtonContact' type="submit">Submit</button>
             </form>
         </div>
     )
